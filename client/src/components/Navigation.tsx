@@ -61,7 +61,7 @@ export function Navigation() {
           <div className="flex items-center space-x-4">
             {/* Social Icons */}
             <motion.a
-              href="https://github.com"
+              href="https://github.com/sisyphus47"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
@@ -70,7 +70,7 @@ export function Navigation() {
               <Github size={20} />
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/sarim-a-2b487b200/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}

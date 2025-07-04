@@ -8,7 +8,14 @@ import { LetterAnimation } from "./LetterAnimation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 
 const contactFormSchema = z.object({
@@ -36,17 +43,17 @@ export function ContactSection() {
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
-    
+
     try {
       // EmailJS integration would go here
       // For now, we'll simulate the form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
       toast({
         title: "Message sent!",
         description: "Thank you for your message. I'll get back to you soon.",
       });
-      
+
       form.reset();
     } catch (error) {
       toast({
@@ -63,12 +70,12 @@ export function ContactSection() {
     {
       icon: <Mail size={24} />,
       title: "Email",
-      content: "john.developer@example.com",
+      content: "sarimansari313@gmail.com",
     },
     {
       icon: <MapPin size={24} />,
       title: "Location",
-      content: "San Francisco, CA",
+      content: "Kolkata, India",
     },
     {
       icon: <Clock size={24} />,
@@ -86,10 +93,11 @@ export function ContactSection() {
           </h2>
           <div className="w-24 h-1 bg-black dark:bg-white mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            Have a project in mind or want to collaborate? I'd love to hear from you!
+            Have a project in mind or want to collaborate? I'd love to hear from
+            you!
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <motion.div
@@ -112,13 +120,17 @@ export function ContactSection() {
                   {info.icon}
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1 text-black dark:text-white">{info.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400">{info.content}</p>
+                  <h3 className="font-semibold mb-1 text-black dark:text-white">
+                    {info.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {info.content}
+                  </p>
                 </div>
               </motion.div>
             ))}
           </motion.div>
-          
+
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -127,7 +139,10 @@ export function ContactSection() {
             viewport={{ once: true }}
           >
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="contact-form space-y-6">
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="contact-form space-y-6"
+              >
                 <FormField
                   control={form.control}
                   name="name"
@@ -145,7 +160,7 @@ export function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="email"
@@ -164,7 +179,7 @@ export function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="subject"
@@ -182,7 +197,7 @@ export function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="message"
@@ -201,7 +216,7 @@ export function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
+
                 <Button
                   type="submit"
                   disabled={isSubmitting}

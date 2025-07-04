@@ -15,7 +15,10 @@ export function HeroSection() {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-code-tags pt-20">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center bg-code-tags pt-20"
+    >
       <div className="content-layer text-center max-w-4xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -24,7 +27,7 @@ export function HeroSection() {
           className="animate-fade-in"
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            <LetterAnimation text="John Developer" />
+            <LetterAnimation text="Sarim Ansari" />
           </h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -40,8 +43,9 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-12"
           >
-            Crafting beautiful and functional digital experiences with modern technologies. 
-            Passionate about clean code, innovative solutions, and user-centered design.
+            Crafting beautiful and functional digital experiences with modern
+            technologies. Passionate about clean code, innovative solutions, and
+            user-centered design.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -62,7 +66,6 @@ export function HeroSection() {
             >
               View My Work
             </Button>
-
           </motion.div>
         </motion.div>
       </div>
