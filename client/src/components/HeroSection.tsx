@@ -32,7 +32,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 font-light"
           >
-            Full Stack Developer & UI/UX Designer
+            Full Stack Developer
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
