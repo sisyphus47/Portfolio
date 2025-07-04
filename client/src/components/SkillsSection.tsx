@@ -68,7 +68,7 @@ export function SkillsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
               viewport={{ once: true }}
-              className="skill-card bg-white dark:bg-dark-secondary p-6 rounded-lg border border-gray-200 dark:border-gray-700"
+              className="skill-card bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-700"
             >
               <div className="text-center mb-6">
                 <div className="text-black dark:text-white mb-4">
