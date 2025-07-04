@@ -51,7 +51,7 @@ export function Navigation() {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
+                className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
               >
                 {item.label}
               </button>
@@ -65,7 +65,7 @@ export function Navigation() {
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
-              className="text-xl hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
+              className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
             >
               <Github size={20} />
             </motion.a>
@@ -74,7 +74,7 @@ export function Navigation() {
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
-              className="text-xl hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
+              className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
             >
               <Linkedin size={20} />
             </motion.a>
@@ -114,7 +114,7 @@ export function Navigation() {
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
+                  className="text-left text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
                 >
                   {item.label}
                 </button>

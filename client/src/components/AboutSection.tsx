@@ -7,7 +7,7 @@ export function AboutSection() {
     <section id="about" className="py-20 bg-gray-50 dark:bg-dark-secondary bg-code-tags transition-colors duration-500">
       <div className="content-layer max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white">
             <LetterAnimation text="About Me" />
           </h2>
           <div className="w-24 h-1 bg-black dark:bg-white mx-auto"></div>
@@ -66,7 +66,7 @@ export function AboutSection() {
           className="mt-16"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
               <LetterAnimation text="Education" />
             </h3>
             <div className="w-16 h-1 bg-black dark:bg-white mx-auto"></div>

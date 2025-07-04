@@ -32,7 +32,7 @@ export function ProjectsSection() {
     <section id="projects" className="py-20 bg-gray-50 dark:bg-dark-secondary bg-code-tags transition-colors duration-500">
       <div className="content-layer max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white">
             <LetterAnimation text="Featured Projects" />
           </h2>
           <div className="w-24 h-1 bg-black dark:bg-white mx-auto"></div>

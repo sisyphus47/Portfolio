@@ -81,7 +81,7 @@ export function ContactSection() {
     <section id="contact" className="py-20 bg-code-tags">
       <div className="content-layer max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white">
             <LetterAnimation text="Get In Touch" />
           </h2>
           <div className="w-24 h-1 bg-black dark:bg-white mx-auto mb-8"></div>
