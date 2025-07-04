@@ -14,16 +14,6 @@ export function HeroSection() {
     }
   };
 
-  const downloadCV = () => {
-    // Create a temporary link element for CV download
-    const link = document.createElement('a');
-    link.href = '/path-to-cv.pdf'; // Replace with actual CV file path
-    link.download = 'John_Developer_CV.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center bg-code-tags pt-20">
       <div className="content-layer text-center max-w-4xl mx-auto px-6">
@@ -72,13 +62,7 @@ export function HeroSection() {
             >
               View My Work
             </Button>
-            <Button
-              variant="outline"
-              onClick={downloadCV}
-              className="px-8 py-3 border-2 border-black dark:border-white rounded-lg hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 transform hover:scale-105"
-            >
-              Download CV
-            </Button>
+
           </motion.div>
         </motion.div>
       </div>
