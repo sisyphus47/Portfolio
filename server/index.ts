@@ -1,8 +1,12 @@
 import express, { type Request, Response, NextFunction } from "express";
+import cors from "cors"; // ✅ Import CORS
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
+
+app.use(cors()); // ✅ Enable CORS for all origins
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -56,8 +60,7 @@ app.use((req, res, next) => {
 
   const port = 5000;
 
-  // ✅ Fix here — use 'localhost' for Windows compatibility
-  server.listen(port, 'localhost', () => {
+  server.listen(port, "localhost", () => {
     log(`🚀 Server running at http://localhost:${port}`);
   });
 })();
