@@ -53,9 +53,10 @@ export function SkillsSection() {
     <section id="skills" className="py-20 bg-code-tags">
       <div className="content-layer max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-balance text-center text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white max-w-xs sm:max-w-md mx-auto">
+         <h2 className="text-balance text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-black dark:text-white max-w-[90%] sm:max-w-[80%] mx-auto">
   <LetterAnimation text="Skills & Technologies" />
 </h2>
+
 
           <div className="w-24 h-1 bg-black dark:bg-white mx-auto"></div>
         </div>
