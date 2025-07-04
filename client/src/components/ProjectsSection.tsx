@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Image } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { LetterAnimation } from "./LetterAnimation";
 import { Button } from "@/components/ui/button";
 
@@ -49,9 +49,6 @@ export function ProjectsSection() {
               className="project-card bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-700"
             >
               <div className="mb-4">
-                <div className="w-full h-48 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center mb-4">
-                  <Image size={48} className="text-gray-400" />
-                </div>
                 <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">{project.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
                   {project.description}
