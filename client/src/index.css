@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(0, 0%, 0%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Portfolio specific colors */
+  --dark: hsl(240, 10%, 3.9%);
+  --dark-secondary: hsl(240, 3.7%, 15.9%);
+  --gray-50: hsl(210, 40%, 98%);
+  --gray-100: hsl(210, 40%, 96%);
+  --gray-200: hsl(214, 32%, 91%);
+  --gray-300: hsl(213, 27%, 84%);
+  --gray-400: hsl(215, 20%, 65%);
+  --gray-500: hsl(215, 16%, 47%);
+  --gray-600: hsl(215, 19%, 35%);
+  --gray-700: hsl(215, 25%, 27%);
+  --gray-800: hsl(217, 33%, 17%);
+  --gray-900: hsl(222, 84%, 5%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(0, 0%, 100%);
+  --primary-foreground: hsl(0, 0%, 0%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .letter-hover {
+    @apply inline-block transition-all duration-300 cursor-default;
+  }
+  
+  .letter-hover:hover {
+    @apply transform -translate-y-2;
+    animation: letterBounce 0.3s ease-out, letterGlow 0.4s ease-in-out;
+  }
+  
+  .bg-code-tags {
+    @apply relative overflow-hidden;
+  }
+  
+  .bg-code-tags::before {
+    content: '<html>\A  <head>\A    <title>Portfolio</title>\A  </head>\A  <body>\A    <h1>Developer</h1>\A    <section>\A      <p>About</p>\A    </section>\A  </body>\A</html>';
+    @apply absolute inset-0 whitespace-pre font-mono text-sm leading-relaxed pointer-events-none p-8 z-0;
+    opacity: 0.03;
+  }
+  
+  .dark .bg-code-tags::before {
+    opacity: 0.05;
+  }
+  
+  .content-layer {
+    @apply relative z-10;
+  }
+  
+  .skill-card {
+    @apply transition-all duration-300;
+  }
+  
+  .skill-card:hover {
+    @apply transform -translate-y-1;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark .skill-card:hover {
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+  }
+  
+  .project-card {
+    @apply transition-all duration-300 relative overflow-hidden;
+  }
+  
+  .project-card:hover {
+    @apply transform scale-105;
+  }
+  
+  .project-card::before {
+    content: '';
+    @apply absolute inset-0 transform -translate-x-full transition-transform duration-500;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+  }
+  
+  .project-card:hover::before {
+    @apply transform translate-x-full;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    @apply transition-all duration-300;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    @apply transform -translate-y-0.5;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark .contact-form input:focus,
+  .dark .contact-form textarea:focus {
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+  }
+}
+
+@keyframes letterBounce {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes letterGlow {
+  0% { text-shadow: none; }
+  50% { text-shadow: 0 0 20px currentColor; }
+  100% { text-shadow: none; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
