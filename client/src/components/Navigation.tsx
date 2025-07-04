@@ -31,7 +31,7 @@ export function Navigation() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 w-full bg-white/90 dark:bg-dark/90 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800 transition-colors duration-500"
+      className="fixed top-0 w-full bg-white/90 dark:bg-black/90 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800 transition-colors duration-500"
     >
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">

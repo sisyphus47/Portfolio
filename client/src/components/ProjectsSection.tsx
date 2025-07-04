@@ -29,7 +29,7 @@ export function ProjectsSection() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-dark-secondary bg-code-tags transition-colors duration-500">
+    <section id="projects" className="py-20 bg-gray-50 dark:bg-black bg-code-tags transition-colors duration-500">
       <div className="content-layer max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white">
@@ -46,7 +46,7 @@ export function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="project-card bg-white dark:bg-dark p-6 rounded-lg border border-gray-200 dark:border-gray-700"
+              className="project-card bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-700"
             >
               <div className="mb-4">
                 <div className="w-full h-48 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center mb-4">

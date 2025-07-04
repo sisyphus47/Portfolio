@@ -4,7 +4,7 @@ import { LetterAnimation } from "./LetterAnimation";
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-dark-secondary bg-code-tags transition-colors duration-500">
+    <section id="about" className="py-20 bg-gray-50 dark:bg-black bg-code-tags transition-colors duration-500">
       <div className="content-layer max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white">
@@ -78,7 +78,7 @@ export function AboutSection() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-dark p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
+              className="bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-black dark:bg-white text-white dark:text-black rounded-lg flex items-center justify-center mr-4">
@@ -103,7 +103,7 @@ export function AboutSection() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-dark p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
+              className="bg-white dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-black dark:bg-white text-white dark:text-black rounded-lg flex items-center justify-center mr-4">
