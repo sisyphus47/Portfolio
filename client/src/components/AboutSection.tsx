@@ -50,7 +50,7 @@ export function AboutSection() {
               <User size={120} />
             </div>
             <div className="space-y-2">
-              <p className="font-semibold text-lg">John Developer</p>
+              <p className="font-semibold text-lg text-black dark:text-white">John Developer</p>
               <p className="text-gray-600 dark:text-gray-400">Full Stack Developer</p>
               <p className="text-gray-500 dark:text-gray-500">San Francisco, CA</p>
             </div>
@@ -85,7 +85,7 @@ export function AboutSection() {
                   <GraduationCap size={24} />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold">Bachelor of Computer Science</h4>
+                  <h4 className="text-lg font-semibold text-black dark:text-white">Bachelor of Computer Science</h4>
                   <p className="text-gray-600 dark:text-gray-400">University of California, Berkeley</p>
                 </div>
               </div>
@@ -110,7 +110,7 @@ export function AboutSection() {
                   <GraduationCap size={24} />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold">Full Stack Web Development</h4>
+                  <h4 className="text-lg font-semibold text-black dark:text-white">Full Stack Web Development</h4>
                   <p className="text-gray-600 dark:text-gray-400">General Assembly</p>
                 </div>
               </div>

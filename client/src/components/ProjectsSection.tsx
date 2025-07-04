@@ -52,7 +52,7 @@ export function ProjectsSection() {
                 <div className="w-full h-48 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center mb-4">
                   <Image size={48} className="text-gray-400" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-black dark:text-white">{project.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
                   {project.description}
                 </p>
@@ -60,7 +60,7 @@ export function ProjectsSection() {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium text-black dark:text-white"
                     >
                       {tech}
                     </span>

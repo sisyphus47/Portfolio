@@ -112,7 +112,7 @@ export function ContactSection() {
                   {info.icon}
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">{info.title}</h3>
+                  <h3 className="font-semibold mb-1 text-black dark:text-white">{info.title}</h3>
                   <p className="text-gray-600 dark:text-gray-400">{info.content}</p>
                 </div>
               </motion.div>

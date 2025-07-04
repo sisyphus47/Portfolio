@@ -74,7 +74,7 @@ export function SkillsSection() {
                 <div className="text-black dark:text-white mb-4">
                   {category.icon}
                 </div>
-                <h3 className="text-xl font-semibold">{category.title}</h3>
+                <h3 className="text-xl font-semibold text-black dark:text-white">{category.title}</h3>
               </div>
               <div className="space-y-4">
                 {category.skills.map((skill, skillIndex) => (
@@ -89,7 +89,7 @@ export function SkillsSection() {
                     <div className="text-black dark:text-white">
                       {skill.icon}
                     </div>
-                    <span className="font-medium">{skill.name}</span>
+                    <span className="font-medium text-black dark:text-white">{skill.name}</span>
                   </motion.div>
                 ))}
               </div>
