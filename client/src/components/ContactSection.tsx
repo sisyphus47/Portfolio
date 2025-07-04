@@ -17,6 +17,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "emailjs-com"; // ✅ Added
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -43,11 +44,19 @@ export function ContactSection() {
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
-
     try {
-      // EmailJS integration would go here
-      // For now, we'll simulate the form submission
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await emailjs.send(
+        "service_gxejjsa", // 🔁 Replace with your EmailJS service ID
+        "template_4ygujke", // 🔁 Replace with your template ID
+        {
+          from_name: data.name,
+          from_email: data.email,
+          subject: data.subject,
+          message: data.message,
+          to_email: "sarimansari313@gmail.com",
+        },
+        "KqC618g9HucZe5pNR" // 🔁 Replace with your EmailJS public key
+      );
 
       toast({
         title: "Message sent!",
@@ -61,6 +70,7 @@ export function ContactSection() {
         description: "Failed to send message. Please try again.",
         variant: "destructive",
       });
+      console.error("EmailJS Error:", error);
     } finally {
       setIsSubmitting(false);
     }
